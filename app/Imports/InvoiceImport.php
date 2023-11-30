@@ -24,6 +24,7 @@ class InvoiceImport implements ToModel
             'total' => $row[3],
             'user_id' => 1,
             'created_at' => $myDate = is_numeric($row[4]) ? Carbon::instance(Date::excelToDateTimeObject($row[4])) : Carbon::createFromFormat('d/m/Y',$row[4]),
+            
         ]);
     }
 }
